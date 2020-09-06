@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/addProduct"
+            android:icon="@drawable/ic_move_to_inbox_black_24dp"
+            android:title="Add product" />
+        <item android:id="@+id/location"
+            android:icon="@drawable/ic_location_on__24dp"
+            android:title="location"/>
+    </group>
+
+    <item android:title="Subheader">
+        <menu>
+            <item android:title="About"/>
+        </menu>
+    </item>
+</menu>

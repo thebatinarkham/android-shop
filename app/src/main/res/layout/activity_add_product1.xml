@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.addproduct.addproduct1.AddProductActivity1"
+    android:id="@+id/addProductPage1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:theme="@style/ProgressBarTheme"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="false"
+            android:layout_alignParentTop="true"
+            android:minHeight="5dp"
+            android:maxHeight="5dp"
+            android:visibility="invisible"
+            />
+
+<!--        <include-->
+<!--            android:id="@+id/myProgressbar"-->
+<!--            android:layout_below="@id/progressBar"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="0dp"-->
+<!--            layout="@layout/progress_btn_layout"/>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/productDescriptionLayout"
+            android:layout_below="@id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/colorWhite"
+            android:hint="Add Description">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/productDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/productTag"
+            android:layout_below="@+id/productDescriptionLayout"
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+
+
+        
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+            <Button
+                android:id="@+id/productDelete"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textColor="@color/colorWhite"
+                android:text="Reset"/>
+            <Button
+                android:id="@+id/productSaveBtn"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:textColor="@color/colorWhite"
+                android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+                android:drawablePadding="-15sp"
+                android:text="Save"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

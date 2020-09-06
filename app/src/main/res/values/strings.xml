@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Shop</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="login">Login</string>
+    <string name="sign_In">Sign In</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="close_drawer">Close Navigation Drawer</string>
+    <string name="hello_world">Hello world</string>
+
+    <string name="product_qty_prompt">Qty :</string>
+    <string-array name="product_qty">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="product_category_prompt">Category</string>
+    <string name="product_details">Product Details</string>
+    <string-array name="product_category">
+        <item>Furniture</item>
+        <item>Appliance</item>
+        <item>Kitchen</item>
+    </string-array>
+
+    <string name="appliance">Appliance</string>
+
+
+    <array name="product_tagName">
+        <item>Furniture</item>
+        <item>Modern</item>
+        <item>Appliance</item>
+        <item>ShakerStyle</item>
+        <item>Antique</item>
+        <item>Flexible</item>
+    </array>
+
+
+
+</resources>
