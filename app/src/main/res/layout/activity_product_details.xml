@@ -48,6 +48,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_alignParentRight="true"
                 app:backgroundTint="@color/colorWhite"
+                android:visibility="invisible"
                 android:src="@drawable/ic_shopping_cart_white_24dp"/>
             <TextView
                 android:id="@+id/productTitleForCard"

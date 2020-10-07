@@ -2,6 +2,7 @@ package com.example.shop.screen.productdetails;
 
 import android.net.Uri;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -90,23 +92,29 @@ implements ProductDetailsViewMvc {
             });
         }
 
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+            AddToCart.setVisibility(View.VISIBLE);
+            AddToCart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    products.put("productId", product.getProductId());
+                    products.put("productName", product.getProductName());
+                    products.put("productPrice", product.getProductPrice());
+                    products.put("productDes", product.getProductDes());
+                    products.put("productImage1", product.getProductImage1());
+                    products.put("productQty",1);
 
-
-        AddToCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                products.put("productId", product.getProductId());
-                products.put("productName", product.getProductName());
-                products.put("productPrice", product.getProductPrice());
-                products.put("productDes", product.getProductDes());
-                products.put("productImage1", product.getProductImage1());
-                products.put("productQty",1);
-
-                for (Listener listener :getListeners()) {
-                    listener.onAddProductToCart(products,product);
+                    for (Listener listener :getListeners()) {
+                        listener.onAddProductToCart(products,product);
+                    }
                 }
-            }
-        });
+            });
+
+        }
+
+
+
+
     }
 
     @Override
