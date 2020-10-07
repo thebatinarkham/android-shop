@@ -5,6 +5,7 @@
     <item android:title="Edit"
         android:id="@+id/productEditMenu"
         app:showAsAction="always"
+        android:visible="false"
         >
     </item>
 </menu>

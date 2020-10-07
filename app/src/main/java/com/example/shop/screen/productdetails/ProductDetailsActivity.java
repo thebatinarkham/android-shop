@@ -46,6 +46,12 @@ public class ProductDetailsActivity extends BaseActivity implements ProductDetai
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.productdetails_menu,menu);
+        if (getCompositionRoot().getUserDetails() != null) {
+            MenuItem item = menu.findItem(R.id.productEditMenu);
+            item.setVisible(true);
+
+        }
+
         return super.onCreateOptionsMenu(menu);
     }
 
